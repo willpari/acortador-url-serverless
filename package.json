@@ -1,0 +1,21 @@
+{
+  "name": "acortador-url-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongodb": "^7.0.0",
+    "nanoid": "^3.3.11"
+  },
+  "devDependencies": {
+    "serverless-offline": "^14.4.0"
+  }
+}

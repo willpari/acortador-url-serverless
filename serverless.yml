@@ -1,0 +1,28 @@
+service: acortador-pro
+org: hikicorp
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    MONGO_URI: ${env:MONGO_URI}
+
+functions:
+  create:
+    handler: handler.createShortUrl
+    events:
+      - http:
+          path: shorten
+          method: post
+          cors: true
+  redirect:
+    handler: handler.redirectUrl
+    events:
+      - http:
+          path: /{shortCode}
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
